@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VEIL — Three Operating Models</title>
+<style>
+:root{--ink:#0a171d;--lime:#bdff24;--mist:#f2f5f2;--line:#dbe2de;--violet:#8d14ef;--teal:#08cda1}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font:16px/1.55 Inter,system-ui;color:var(--ink)}button{font:inherit}.w{width:min(1160px,calc(100% - 36px));margin:auto}.top{position:sticky;top:0;z-index:20;background:#fffe;border-bottom:1px solid var(--line);backdrop-filter:blur(14px)}.bar{min-height:74px;display:flex;align-items:center;gap:28px}.logo{font-size:25px;font-weight:950;letter-spacing:.18em;margin-right:auto;cursor:pointer}.tabs{display:flex;gap:7px}.tabs button{border:1px solid var(--line);background:#fff;padding:11px 15px;border-radius:99px;font-weight:850;cursor:pointer}.tabs button.on{background:var(--ink);color:#fff}.view{display:none}.view.on{display:block}.btn{display:inline-block;border:0;border-radius:99px;background:var(--ink);color:#fff;padding:13px 20px;font-weight:850;text-decoration:none;cursor:pointer}.btn.lime{background:var(--lime);color:var(--ink)}.ey{font-size:12px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}h1,h2{letter-spacing:-.055em;line-height:.95}h1{font-size:clamp(55px,7vw,96px);margin:18px 0}h2{font-size:clamp(40px,5vw,67px);margin:12px 0 28px}.hero{background:radial-gradient(circle at 76% 38%,#e2ffc1,transparent 34%),var(--mist);padding:80px 0}.heroGrid{display:grid;grid-template-columns:1fr 1fr;align-items:center}.hero img,.productImg{width:110%;mix-blend-mode:multiply}.lead{font-size:20px;color:#536168;max-width:650px}.choice{padding:90px 0}.three{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.choiceCard{padding:28px;border:1px solid var(--line);border-radius:23px;background:#fff}.choiceCard b{font:700 55px Georgia;color:#b6c2bc}.choiceCard button{border:0;background:none;padding:0;font-weight:900;cursor:pointer}.strip{background:var(--ink);color:#fff;padding:26px 0}.strip .w{display:flex;justify-content:space-around;gap:20px;flex-wrap:wrap}.strip span:before{content:"✓";color:var(--lime);margin-right:8px}section{padding:95px 0}.head{display:flex;justify-content:space-between;align-items:end;gap:35px;margin-bottom:40px}.head p{max-width:530px;color:#617076}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.card{border:1px solid var(--line);border-radius:20px;padding:24px;background:#fff}.card p{color:#617076}.m1hero{text-align:center;padding:70px 0 20px}.m1hero img{max-width:650px;width:75%;mix-blend-mode:multiply}.feature4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.feature4 .card{text-align:center}.split{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}.visual{min-height:430px;border-radius:28px;background:var(--lime);display:grid;place-items:center;overflow:hidden}.visual img{width:95%;mix-blend-mode:multiply}.included{background:var(--mist)}.bundle{border:2px solid var(--ink);border-radius:22px;padding:25px}.bundle.hot{background:#efffc2}.m2hero{background:linear-gradient(135deg,#250038,#4a006b);color:#fff;padding:90px 0}.metric{background:#ffffff12;border:1px solid #ffffff20;border-radius:20px;padding:22px}.m2hero .lead{color:#d7bedf}.purple{background:linear-gradient(90deg,#8213ed,#a90fff);color:#fff}.workflow{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}.workflow b{display:grid;place-items:center;width:55px;height:55px;border-radius:50%;background:var(--violet);color:white;font:700 26px Georgia}.m3hero{background:#6f6d83;color:#fff;padding:90px 0}.m3hero .heroGrid{grid-template-columns:1.1fr .9fr}.quad{display:grid;grid-template-columns:1fr 1fr;gap:45px}.quad article{padding:22px}.gallery{background:#d9d9d9}.galleryRow{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.galleryRow div{height:280px;background:#fff;border-radius:18px;display:grid;place-items:center;overflow:hidden}.galleryRow img{width:100%;mix-blend-mode:multiply}.specs{text-align:center}.support{background:linear-gradient(120deg,#e8ecea,#bfc9c4);padding:70px 0}.support span{background:var(--teal);padding:5px 10px}.analysisHero{background:var(--ink);color:#fff;padding:90px 0}.orgs,.filters{display:flex;flex-wrap:wrap;gap:9px}.orgs span,.filters button{border:1px solid #52646b;border-radius:99px;padding:10px 14px}.orgs .hot{background:var(--lime);color:var(--ink);border-color:var(--lime)}.filters button{background:#fff;font-weight:800;cursor:pointer}.filters button.on{background:var(--ink);color:#fff}.market{background:var(--mist)}.rank{display:inline-block;background:#eaffad;border-radius:99px;padding:5px 9px;font-size:11px;font-weight:900}.buyer{border-top:1px solid var(--line);padding-top:12px;font-size:13px}.phases{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.phase{border-top:3px solid var(--ink);padding:18px 5px}.notice{padding:18px;background:#e4e9e5;border-radius:15px;margin-top:25px;font-size:13px}details{border-bottom:1px solid var(--line);padding:18px 0}summary{font-weight:850;cursor:pointer}footer{background:#071116;color:#bdc6c9;padding:45px 0}@media(max-width:850px){.bar{flex-wrap:wrap;padding:12px 0}.tabs{order:2;width:100%;overflow:auto}.tabs button{white-space:nowrap}.heroGrid,.split,.quad{grid-template-columns:1fr}.three,.cards,.workflow,.galleryRow{grid-template-columns:1fr 1fr}.feature4,.phases{grid-template-columns:1fr 1fr}.head{display:block}}@media(max-width:560px){section{padding:70px 0}.three,.cards,.workflow,.galleryRow,.feature4,.phases{grid-template-columns:1fr}.hero{padding:60px 0}.hero img{width:100%}.m1hero img{width:100%}.visual{min-height:300px}}
+.pricing{background:#f2f5f2}.priceGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.priceCard{background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px}.priceCard.featured{border:2px solid var(--ink);box-shadow:0 18px 45px #07111618}.amount{font-size:38px;font-weight:950}.priceCard ul{padding-left:20px;min-height:145px}.priceTable{width:100%;border-collapse:collapse;background:#fff}.priceTable th,.priceTable td{text-align:left;padding:16px;border-bottom:1px solid var(--line)}.priceTable th{background:var(--ink);color:#fff}.sourceRef{margin-top:24px;font-size:12px;color:#65737a}@media(max-width:700px){.priceGrid{grid-template-columns:1fr}.priceTable{font-size:12px}.priceTable th,.priceTable td{padding:9px}}
+</style>
+<style>.pricing{display:none}#model1.on + .pricing,#model2.on + .pricing2,#model3.on + .pricing3{display:block}</style>
+</head>
+<body>
+<nav class="top">
+<div class="w bar">
+<div class="logo" data-go="landing">VEIL•</div>
+<div class="tabs">
+<button data-go="model1">MODEL 1</button>
+<button data-go="model2">MODEL 2</button>
+<button data-go="model3">MODEL 3</button>
+<button data-go="analysis">COMMERCIAL ANALYSIS</button>
+</div>
+</div>
+</nav>
+<main>
+<div class="view on" id="landing">
+<header class="hero">
+<div class="w heroGrid">
+<div>
+<span class="ey">Controlled Device Access · Pakistan</span>
+<h1>One product.<br>
+<em style="font-family:Georgia;font-weight:400">Three ways to operate.</em>
+</h1>
+<p class="lead">VEIL combines lockable phone pouches with a complete implementation system. Choose a product-led rollout, a managed zone service, or a detailed institutional product programme.</p>
+<p>
+<button class="btn lime" data-go="model1">Explore the models →</button>
+</p>
+</div>
+<img src="assets/veil-family.png" alt="VEIL lockable pouch family">
+</div>
+</header>
+<div class="strip">
+<div class="w">
+<span>Pouches + unlockers</span>
+<span>Policy + SOP</span>
+<span>Training + zoning</span>
+<span>Pilot + measurement</span>
+</div>
+</div>
+<section class="choice">
+<div class="w">
+<span class="ey">Operating architecture</span>
+<h2>Same system. Different route to market.</h2>
+<div class="three">
+<article class="choiceCard">
+<b>01</b>
+<h3>Premium Secure Pouch</h3>
+<p>Product-first presentation, bundles, branding and institutional deployment.</p>
+<button data-go="model1">Open Model 1 →</button>
+</article>
+<article class="choiceCard">
+<b>02</b>
+<h3>Managed Zones</h3>
+<p>Room, floor or whole-site service with recurring implementation support.</p>
+<button data-go="model2">Open Model 2 →</button>
+</article>
+<article class="choiceCard">
+<b>03</b>
+<h3>Institutional Product Programme</h3>
+<p>Detailed benefits, materials, specification, gallery and onboarding support.</p>
+<button data-go="model3">Open Model 3 →</button>
+</article>
+</div>
+</div>
+</section>
+</div>
+
+<div class="view" id="model1">
+<section class="m1hero">
+<div class="w">
+<span class="ey">Model 01 · Product-led</span>
+<h1>VEIL Secure Pouches</h1>
+<p class="lead" style="margin:auto">A premium lockable pouch system supplied with the implementation tools needed to operate secure, respectful phone-free zones.</p>
+<img src="assets/veil-family.png" alt="VEIL pouches">
+<div class="feature4">
+<div class="card">
+<b>Durable shell</b>
+<p>Reusable, padded construction</p>
+</div>
+<div class="card">
+<b>Managed lock</b>
+<p>Fixed or portable unlock</p>
+</div>
+<div class="card">
+<b>Device access control</b>
+<p>User retains the pouch</p>
+</div>
+<div class="card">
+<b>Two formats</b>
+<p>Standard and large-device</p>
+</div>
+</div>
+</div>
+</section>
+<section>
+<div class="w split">
+<div class="visual">
+<img src="assets/veil-family.png">
+</div>
+<div>
+<span class="ey">Three finishes</span>
+<h2>Designed for daily circulation.</h2>
+<p>Graphite, institutional green and black options can be numbered and branded. Final construction, compatibility and performance are confirmed through supplier samples.</p>
+<ul>
+<li>Reinforced seams and padded interior</li>
+<li>Asset numbering and inventory control</li>
+<li>Optional transparent-screen prototype</li>
+<li>No RF-blocking claim without testing</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="included">
+<div class="w">
+<div class="head">
+<div>
+<span class="ey">Complete system</span>
+<h2>What comes with Veil.</h2>
+</div>
+<p>We sell the physical pouches and the implementation—not loose hardware without an operating model.</p>
+</div>
+<div class="cards">
+<div class="card">
+<h3>Pouches & unlockers</h3>
+<p>Sized inventory, fixed/portable unlock points, storage and spares.</p>
+</div>
+<div class="card">
+<h3>Deployment kit</h3>
+<p>Red/Amber/Green signage, issue log, briefing cards and exception SOP.</p>
+</div>
+<div class="card">
+<h3>Training & review</h3>
+<p>Operator briefing, pilot measurement and scale recommendation.</p>
+</div>
+</div>
+</div>
+</section>
+<section>
+<div class="w">
+<h2>Choose a bundle.</h2>
+<div class="cards">
+<div class="bundle">
+<h3>Demonstration</h3>
+<p>Stakeholder handling and unlock test.</p>
+</div>
+<div class="bundle hot">
+<h3>Institutional Pilot</h3>
+<p>One zone, operating kit, training and measurement.</p>
+</div>
+<div class="bundle">
+<h3>Enterprise Deployment</h3>
+<p>Multiple zones, branded inventory and ongoing support.</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+
+<section class="pricing"><div class="w"><span class="ey">Indicative Pakistan pricing</span><h2>Product bundles.</h2><div class="priceGrid"><article class="priceCard"><h3>Demonstration Kit</h3><div class="amount">PKR 95,000</div><ul><li>10 sample pouches</li><li>1 portable unlocker</li><li>Demonstration and briefing</li></ul></article><article class="priceCard featured"><h3>Secure Pilot</h3><div class="amount">PKR 295,000</div><ul><li>40 pouches and 2 unlockers</li><li>Signage, SOP and issue log</li><li>Training and pilot review</li></ul></article><article class="priceCard"><h3>Enterprise</h3><div class="amount">Custom quote</div><ul><li>100+ branded pouches</li><li>Multiple unlock points</li><li>Implementation and 90-day support</li></ul></article></div><div class="notice">Planning estimates only; taxes, freight and customization excluded.</div><p class="sourceRef">Structure reference: <a href="https://phonelockpouches.com/phonepouches" target="_blank">phonelockpouches.com/phonepouches ↗</a></p></div></section></div>
+<div class="view" id="model2">
+<header class="m2hero">
+<div class="w heroGrid">
+<div>
+<span class="ey">Model 02 · Managed service</span>
+<h1>Confidentiality<br>
+<em style="font-family:Georgia">enforced physically.</em>
+</h1>
+<p class="lead">VEIL supplies the pouch system and manages the implementation for meeting rooms, secure floors, visitor zones and whole sites.</p>
+<a class="btn" style="background:var(--violet)" href="#m2work">How it works →</a>
+</div>
+<div class="cards" style="grid-template-columns:1fr 1fr">
+<div class="metric" style="grid-column:1/-1">
+<span class="ey">Deployment</span>
+<h3>Room · Zone · Site</h3>
+</div>
+<div class="metric">
+<b style="font-size:40px">0</b>
+<p>IT integration required</p>
+</div>
+<div class="metric">
+<b style="font-size:40px">1</b>
+<p>Operational partner</p>
+</div>
+</div>
+</div>
+</header>
+<section id="m2work">
+<div class="w">
+<div class="head">
+<div>
+<span class="ey">How it works</span>
+<h2>No IT. No installation. Immediate.</h2>
+</div>
+<p>Pouches are issued at reception or the room door. The organization keeps control of policy; VEIL supports the operating system.</p>
+</div>
+<div class="workflow">
+<article>
+<b>1</b>
+<h3>Issue at entry</h3>
+<p>Staff and visitors place devices in numbered pouches.</p>
+</article>
+<article>
+<b>2</b>
+<h3>Secure for duration</h3>
+<p>The user retains the sealed pouch in the controlled zone.</p>
+</article>
+<article>
+<b>3</b>
+<h3>Unlock on exit</h3>
+<p>Authorized staff unlock, reconcile and record exceptions.</p>
+</article>
+</div>
+</div>
+</section>
+<section class="purple">
+<div class="w">
+<h2>Hardware + operations.</h2>
+<div class="cards">
+<div class="card" style="color:var(--ink)">
+<h3>Physical system</h3>
+<p>Pouches, unlockers, storage and replacement stock.</p>
+</div>
+<div class="card" style="color:var(--ink)">
+<h3>Policy system</h3>
+<p>Zone rules, visitor briefing, emergency and accessibility exceptions.</p>
+</div>
+<div class="card" style="color:var(--ink)">
+<h3>Managed service</h3>
+<p>Training, periodic checks, inventory review and performance reporting.</p>
+</div>
+</div>
+</div>
+</section>
+<section>
+<div class="w">
+<h2>Flexible deployment scopes.</h2>
+<div class="cards">
+<div class="card">
+<h3>Per meeting room</h3>
+<p>Capacity-matched kit and fixed unlock point.</p>
+</div>
+<div class="card">
+<h3>Floor or zone</h3>
+<p>Shared circulation across defined controlled spaces.</p>
+</div>
+<div class="card">
+<h3>Whole site</h3>
+<p>Central inventory, multi-entry SOP and account support.</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+
+<section class="pricing pricing2"><div class="w"><span class="ey">Indicative managed-service pricing</span><h2>Room, zone or site.</h2><div class="priceGrid"><article class="priceCard"><h3>Meeting Room</h3><div class="amount">PKR 45,000/mo</div><ul><li>Up to 20 pouches</li><li>1 fixed unlock point</li><li>Policy and visitor cards</li><li>Quarterly stock review</li></ul></article><article class="priceCard featured"><h3>Secure Zone</h3><div class="amount">PKR 145,000/mo</div><ul><li>Up to 75 pouches</li><li>Multiple unlock points</li><li>Operator training and spares</li><li>Monthly operations review</li></ul></article><article class="priceCard"><h3>Whole Site</h3><div class="amount">From PKR 325,000/mo</div><ul><li>Multi-entry deployment</li><li>Central inventory management</li><li>Reporting and replacements</li><li>Dedicated account support</li></ul></article></div><div class="notice">Illustrative subscription pricing; final scope depends on peak users, number of entry points, service level and product cost.</div><p class="sourceRef">Structure reference: <a href="https://www.phoneaway.co.uk/" target="_blank">phoneaway.co.uk ↗</a></p></div></section>
+<div class="view" id="model3">
+<header class="m3hero">
+<div class="w heroGrid">
+<div>
+<span class="ey">Model 03 · Institutional programme</span>
+<h1>VEIL — lockable pouches for focused, controlled spaces.</h1>
+<p class="lead" style="color:#eee">Pouches, specifications, institutional benefits and onboarding support presented as one complete programme.</p>
+<a class="btn" style="background:var(--teal)" href="#m3details">Explore the product →</a>
+</div>
+<img src="assets/veil-family.png" alt="VEIL institutional pouch">
+</div>
+</header>
+<section id="m3details">
+<div class="w quad">
+<article>
+<span class="ey">Purpose</span>
+<h3>Control device access without taking custody</h3>
+<p>VEIL creates a clear physical routine for meetings, training, events and approved institutional areas.</p>
+</article>
+<article>
+<span class="ey">Benefits</span>
+<ul>
+<li>Professional and non-confrontational</li>
+<li>Visible policy enforcement</li>
+<li>Repeatable visitor experience</li>
+</ul>
+</article>
+<article>
+<span class="ey">Materials</span>
+<p>Proposed padded technical fabric, metal locking interface and durable polymer components—subject to sample validation.</p>
+</article>
+<article>
+<span class="ey">Features</span>
+<ul>
+<li>Managed locking mechanism</li>
+<li>Standard and large-device formats</li>
+<li>Numbered inventory</li>
+<li>Branding options</li>
+</ul>
+</article>
+</div>
+</section>
+<section class="gallery">
+<div class="w">
+<h2>VEIL gallery.</h2>
+<div class="galleryRow">
+<div>
+<img src="assets/veil-family.png">
+</div>
+<div>
+<img src="assets/veil-family.png" style="width:135%">
+</div>
+<div>
+<b style="font-size:32px">LOCK → RETAIN → UNLOCK</b>
+</div>
+</div>
+</div>
+</section>
+<section class="specs">
+<div class="w">
+<span class="ey">Product specifications</span>
+<h2>Built to be validated.</h2>
+<div class="cards">
+<div class="card">
+<h3>Compatibility</h3>
+<p>Two proposed sizes; confirm against target-device sample set.</p>
+</div>
+<div class="card">
+<h3>Durability</h3>
+<p>Cycle, drop, seam, cleaning and environmental tests before claims.</p>
+</div>
+<div class="card">
+<h3>Security</h3>
+<p>Tamper evidence, unlock force and failure-mode testing.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="support">
+<div class="w">
+<h2>
+<span>WE SUPPORT IMPLEMENTATION</span>
+</h2>
+<div class="split">
+<div>
+<h3>Onboarding support</h3>
+<p>Policy template · visitor communication · operator training · emergency SOP · ongoing execution review</p>
+</div>
+<div>
+<h3>Included with the pouch system</h3>
+<p>We do not position Model 3 as hardware alone. Every institutional order includes a defined implementation tier.</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+
+<section class="pricing pricing3"><div class="w"><span class="ey">Indicative component pricing</span><h2>Product + implementation.</h2><table class="priceTable"><thead><tr><th>Component</th><th>Planning price</th><th>Implementation included</th></tr></thead><tbody><tr><td>Standard VEIL pouch</td><td>PKR 7,500 each</td><td>Numbering and issue workflow</td></tr><tr><td>Branded pouch · MOQ 100</td><td>PKR 650,000</td><td>Artwork setup and inventory plan</td></tr><tr><td>Portable unlocker</td><td>PKR 35,000</td><td>Custody and exception protocol</td></tr><tr><td>Fixed unlock station</td><td>PKR 48,000</td><td>Placement and exit workflow</td></tr><tr><td>Institutional onboarding</td><td>PKR 125,000/site</td><td>Policy, communications, training and launch review</td></tr></tbody></table><div class="notice">Planning estimates only and not supplier quotations. Final figures require specification, sample, freight, duty and tax validation.</div><p class="sourceRef">Structure reference: <a href="https://www.phonepouches.com/fixby-phone-pouch" target="_blank">phonepouches.com/fixby-phone-pouch ↗</a></p></div></section>
+<div class="view" id="analysis">
+<header class="analysisHero">
+<div class="w">
+<span class="ey" style="color:var(--lime)">Commercial Analysis</span>
+<h1>Pakistan-first<br>route to market.</h1>
+<p class="lead" style="color:#b9c6c9">Prioritize authorized pilots in institutional and high-confidentiality environments, then expand through security and event channels.</p>
+<div class="orgs">
+<span class="hot">Ministry of Interior</span>
+<span class="hot">Ministry of Defence</span>
+<span class="hot">Appropriate Armed Forces environments</span>
+<span>FIA</span>
+<span>NDU</span>
+<span>Civil Defence</span>
+<span>Security companies</span>
+</div>
+</div>
+</header>
+<section class="market">
+<div class="w">
+<div class="head">
+<div>
+<span class="ey">Opportunity map</span>
+<h2>Where Veil can be sold.</h2>
+</div>
+<p>Tiering is a commercial hypothesis based on problem fit, accessible relationships and repeat-use potential.</p>
+</div>
+<div class="filters">
+<button class="on" data-f="all">All</button>
+<button data-f="institutional">Institutional</button>
+<button data-f="corporate">Corporate</button>
+<button data-f="channel">Channels</button>
+</div>
+<div class="cards marketCards">
+<article class="card" data-t="institutional">
+<span class="rank">Tier 1</span>
+<h3>MOI & attached environments</h3>
+<p>Visitor rooms, conferences, training and approved spaces.</p>
+<div class="buyer">
+<b>Functions:</b> security, administration, procurement</div>
+</article>
+<article class="card" data-t="institutional">
+<span class="rank">Tier 1</span>
+<h3>MOD / defence-linked</h3>
+<p>Authorized non-operational visitor, training and R&D contexts.</p>
+<div class="buyer">
+<b>Functions:</b> security administration, protocol</div>
+</article>
+<article class="card" data-t="institutional">
+<span class="rank">Tier 1</span>
+<h3>FIA, NDU, Civil Defence</h3>
+<p>Briefings, examinations, conferences and delegations.</p>
+<div class="buyer">
+<b>Functions:</b> security, training, administration</div>
+</article>
+<article class="card" data-t="channel">
+<span class="rank">Tier 1</span>
+<h3>Security companies</h3>
+<p>Resale, deployment and managed reception services.</p>
+<div class="buyer">
+<b>Functions:</b> BD, operations, solutions</div>
+</article>
+<article class="card" data-t="corporate">
+<span class="rank">Tier 1</span>
+<h3>Events & R&D</h3>
+<p>Confidential launches, laboratories, prototypes and reviews.</p>
+<div class="buyer">
+<b>Functions:</b> event lead, R&D, security</div>
+</article>
+<article class="card" data-t="corporate">
+<span class="rank">Tier 2</span>
+<h3>Banks, data centres, pharma</h3>
+<p>SOCs, NOCs, tours, production and QA zones.</p>
+<div class="buyer">
+<b>Functions:</b> CISO, facilities, plant security</div>
+</article>
+</div>
+<div class="notice">
+<b>Evidence boundary:</b> named organizations and public procurement channels are sourced facts. Target fit, buyer functions and priority tiers are hypotheses to validate. No approval, endorsement, partnership or first-in-Pakistan claim is made.</div>
+</div>
+</section>
+<section>
+<div class="w">
+<h2>Practical expansion sequence.</h2>
+<div class="phases">
+<div class="phase">
+<b>Phase 1</b>
+<h3>Demonstrate</h3>
+<p>10–25 pouches with liaison-led stakeholder review.</p>
+</div>
+<div class="phase">
+<b>Phase 2</b>
+<h3>Pilot</h3>
+<p>One approved zone, SOP and measured operations.</p>
+</div>
+<div class="phase">
+<b>Phase 3</b>
+<h3>Convert</h3>
+<p>Formal proposal through applicable procurement route.</p>
+</div>
+<div class="phase">
+<b>Phase 4</b>
+<h3>Expand</h3>
+<p>Additional sites and authorized channel partners.</p>
+</div>
+</div>
+<h2 style="margin-top:70px">Commercial formats.</h2>
+<div class="cards">
+<div class="card">
+<h3>Kit sale</h3>
+<p>Pouches, unlockers, implementation pack and training.</p>
+</div>
+<div class="card">
+<h3>Managed service</h3>
+<p>Per-room, zone or site fee with ongoing support.</p>
+</div>
+<div class="card">
+<h3>Event rental</h3>
+<p>Temporary inventory and staffed deployment.</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<footer>
+<div class="w">
+<div class="logo" data-go="landing">VEIL•</div>
+<p>Lockable pouches plus implementation for controlled spaces.</p>
+<small>Concept-stage material · October 2026. Specifications, security performance and pricing require validation. No government or defence approval is claimed.</small>
+</div>
+</footer>
+<script>
+const show=id=>{document.querySelectorAll('.view').forEach(v=>v.classList.toggle('on',v.id===id));document.querySelectorAll('.tabs button').forEach(b=>b.classList.toggle('on',b.dataset.go===id));scrollTo(0,0)};const go=id=>{show(id);history.replaceState(null,'','#'+id)};document.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>go(b.dataset.go));document.querySelectorAll('.filters button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.filters button').forEach(x=>x.classList.remove('on'));b.classList.add('on');document.querySelectorAll('[data-t]').forEach(c=>c.style.display=b.dataset.f==='all'||c.dataset.t===b.dataset.f?'block':'none')});const route=()=>{const id=location.hash.slice(1);show(document.getElementById(id)?id:'landing')};addEventListener('hashchange',route);route();
+</script>
+</body>
+</html>
+
